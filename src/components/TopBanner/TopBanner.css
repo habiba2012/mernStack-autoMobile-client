@@ -1,0 +1,19 @@
+.banner-section {
+    background-image: url(../../assets/images/banner.jpg);
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay-img {
+    background: rgba(60, 90, 119, 0.82);
+    overflow: hidden;
+    height: 100%;
+    z-index: 2;
+}
+
+@media (max-width:777px) {
+    .banner-section {
+        background-size: cover;
+    }
+}
