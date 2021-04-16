@@ -10,7 +10,7 @@ const TopBanner = () => {
                         <h5>We Give you</h5>
                         <h1>QUALITY <span style={{ color: "red" }}> AUTO REPAIR</span></h1>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the</p>
-                        <Link className="btn btn-primary" style={{ backgroundColor: "red" }} to="/appointment">Get Appointment</Link>
+                        <Link className="btn btn-primary" style={{ backgroundColor: "red" }} to="/dashboard">Get Appointment</Link>
                     </div>
 
                 </div>

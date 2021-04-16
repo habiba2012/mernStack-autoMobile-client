@@ -9,13 +9,13 @@
 .social-media .icon {
     height: 40px;
     width: 40px;
-    color: #1cc7c1;
+    color: white;
     border-radius: 50%;
-    border: 1px solid #6ACECE;
+    border: 1px solid white;
     padding: 10px;
 }
 
 .social-media .active-icon {
-    background-color: #6ACECE;
-    color: white;
+    background-color: white;
+    color: #2f3967;
 }

@@ -1,12 +1,23 @@
 import React from 'react';
+import styled, { keyframes } from 'styled-components';
+import { swing } from 'react-animations'
+import { useHistory } from 'react-router';
+// import '.style.css';
+
+const Swing = styled.div`animation: 2s ${keyframes`${swing}`}infinite`;
 
 const AutoService = (props) => {
+    const { id, img, name, description } = props.service;
+    const history = useHistory();
+
     return (
-        <div className="col-md-4 text-center  mb-5">
-            <img style={{ height: "200px" }} src={props.service.img} alt="" />
-            <h5 className="mt-3 mb-3">{props.service.name}hi</h5>
-            <p className="text-secondary text-justify ">{props.service.description}</p>
-        </div>
+        <Swing>
+            <div className="col-md-4 text-center  mb-5 auto-service" onclick={() => history.push(`/service/${id}`)}>
+                <img style={{ height: "200px" }} src={img} alt="" />
+                <h5 className="mt-3 mb-3">{name}</h5>
+                <p className="text-secondary text-justify ">{description}</p>
+            </div>
+        </Swing>
     );
 };
 

@@ -3,7 +3,7 @@ import Suzuki from '../../assets/images/suzuki-logo.png'
 import Nissan from '../../assets/images/Nissan_logo.png'
 import Mercedes from '../../assets/images/mercedes.jpg'
 import Hyundai from '../../assets/images/Hyundai.png'
-
+import './Brand.css'
 import Audi from '../../assets/images/Audi.png'
 
 

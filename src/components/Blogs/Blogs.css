@@ -1,0 +1,34 @@
+.blogs .card {
+    border: 0;
+}
+
+.blogs .card-header {
+    border: 0;
+    background-color: transparent;
+}
+
+.blogs .card:hover {
+    background-image: linear-gradient(75deg, rgba(238, 142, 131, 0.438), rgba(224, 196, 193, 0.438));
+    color: #fff !important;
+    transition: .1s all ease-in-out !important;
+}
+
+.blogs .card:hover .card-body {
+    /* background-image: url(../../../assets/images/quote.png); */
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 60%;
+}
+
+.blogs .card:hover h6,
+.blogs .card:hover p {
+    color: #fff !important;
+}
+
+.blogs .card:hover img {
+    display: none;
+}
+
+.blog-title:hover {
+    color: "red";
+}
