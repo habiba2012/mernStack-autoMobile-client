@@ -13,8 +13,9 @@ const AddService = () => {
             name: data.name,
             imageURL: imageURL,
             description: data.description,
+            cost: data.cost
         };
-        const url = `https://localhost:5500/addService`;
+        const url = 'http://localhost:5500/addServices';
 
         fetch(url, {
             method: "POST",
@@ -53,9 +54,21 @@ const AddService = () => {
                                 <label for="inputName4">Service Name</label>
                                 <input
                                     className="form-control"
-                                    name="name"
+                                    name="name" id="name"
                                     defaultValue="Add new service"
                                     {...register("name", { required: true })}
+                                />
+                            </div>
+
+                        </div>
+                        <div className="form-row">
+                            <div className="col">
+                                <label for="inputName4">Service Price</label>
+                                <input
+                                    className="form-control"
+                                    name="cost" id="cost"
+                                    defaultValue="Add price"
+                                    {...register("cost", { required: true })}
                                 />
                             </div>
 
@@ -65,9 +78,9 @@ const AddService = () => {
                                 <label for="inputPrice4">Description</label>
                                 <input
                                     className="form-control"
-                                    name="detail"
+                                    name="detail" id="description"
                                     defaultValue="service detail"
-                                    {...register("detail", { required: true })}
+                                    {...register("description", { required: true })}
                                 />
                             </div>
                             <div className="col">
@@ -77,7 +90,7 @@ const AddService = () => {
                                 ></i>
                                 <label for="inputImage4">Upload Image</label>
                                 <input
-                                    name="exampleRequired"
+                                    name="img"
                                     type="file"
                                     onChange={handleImageUpload}
                                 />
@@ -86,8 +99,8 @@ const AddService = () => {
                         <input
                             type="submit"
                             value="Save"
-                            className="btn btn-primary mt-4"
-                            style={{ backGroundColor: "salmon" }}
+                            className="btn btn-danger mt-4"
+
                         />
                     </form>
                 </div>

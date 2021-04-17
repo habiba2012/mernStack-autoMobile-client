@@ -4,7 +4,7 @@ const Mechanics = () => {
     return (
         <section className="mechanics">
             <div className="container">
-                <h5 className="text-center  text-primary mb-5">Our Mechanics</h5>
+                <h4 className="text-center text-default mb-5">Our Skilled <span className="text-danger">Mechanics</span></h4>
                 <div className="row">
                     <Mechanic />
                     <Mechanic />

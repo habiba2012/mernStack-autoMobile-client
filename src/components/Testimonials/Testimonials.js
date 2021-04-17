@@ -1,30 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Testimonials.css';
 import Testimonial from '../Testimonial/Testimonial'
 import Jhony from '../../assets/images/mechanicImg3.jpg';
 
 
 const Testimonials = () => {
-    const testimonialsData = [
-        {
-            quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ',
-            name: 'Christian Andrue ',
-            from: 'Copenhagen',
-            img: Jhony
-        },
-        {
-            quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ',
-            name: 'Sofia Karlson',
-            from: 'Søborg',
-            img: Jhony
-        },
-        {
-            quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ',
-            name: 'Pia Hanson',
-            from: 'Gentofte',
-            img: Jhony
-        }
-    ]
+    const [testimonials, setTestimonials] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:5500/review')
+            .then(res => res.json())
+            .then(data => setTestimonials(data))
+    }, [])
+
     return (
         <section className="testimonials my-5 py-5">
             <div className="container">
@@ -33,7 +21,7 @@ const Testimonials = () => {
                     <h1>What Our Customer <br /> Says </h1>
                     <div className="card-deck mt-5">
                         {
-                            testimonialsData.map(testimonial => <Testimonial testimonial={testimonial}></Testimonial>)
+                            testimonials.map(testimonial => <Testimonial key={testimonial.id} testimonial={testimonial}></Testimonial>)
                         }
                     </div>
                 </div>

@@ -25,13 +25,13 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/bookingList" className="text-white">
+                    <Link to="/bookingList/:id" className="text-white">
                         <FontAwesomeIcon icon={faFileAlt} /> <span>Booking List</span>
                     </Link>
                 </li>
                 <li>
                     <Link to="/addReview" className="text-white">
-                        <FontAwesomeIcon icon={faComments} /> <span>Review</span>
+                        <FontAwesomeIcon icon={faComments} /> <span>Add Review</span>
                     </Link>
                 </li>
                 <li>

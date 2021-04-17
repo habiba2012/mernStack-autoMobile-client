@@ -32,16 +32,16 @@ const WhyUs = () => {
     return (
         <div className="why-container">
             <div className="why-text">
-                <h1><span>Why</span> <strong>choose us</strong></h1>
+                <h2><span>Why</span> <strong>choose us</strong></h2>
                 <p>Most of the vehicles get damaged just because of maintenance neglect you take</p>
             </div>
             <section className="service-container">
                 {whyUsData.map(data =>
                     <div className="service">
-                        <img src={data.img} alt="" />
-                        <h4>{data.title}</h4>
+                        <img src={data.img} alt="" style={{ height: "115px" }} />
+                        <h5 className="title">{data.title}</h5>
                         <p>{data.description}</p>
-                        <Link>See More</Link>
+                        <button className="btn btn-danger btn-sm text-center">See More</button>
                     </div>
                 )}
             </section>

@@ -7,17 +7,21 @@ import { useHistory } from 'react-router';
 const Swing = styled.div`animation: 2s ${keyframes`${swing}`}infinite`;
 
 const AutoService = (props) => {
-    const { id, img, name, description } = props.service;
+    const { _id, imageURL, name, description, cost } = props.service;
     const history = useHistory();
-    /* history.push(`/dashboard/${id}`) */
+
+    const handleBooking = (id) => {
+        history.push(`/addBooking/${id}`);
+    }
+
     return (
-        <Swing>
-            <div className="col-md-4 text-center  mb-5 auto-service" onClick={() => history.push('/dashboard')}>
-                <img style={{ height: "200px" }} src={img} alt="" />
-                <h5 className="mt-3 mb-3">{name}</h5>
-                <p className="text-secondary text-justify ">{description}</p>
+        <>
+            <div className="col-md-4 text-center  mb-5" id="autoService" onClick={() => handleBooking(_id)}>
+                <img style={{ height: "200px" }} src={imageURL} alt="" />
+                <h5 className="mt-3 mb-3">{name}</h5><p>Service Charge ${cost}</p>
+                <p className="text-secondary text-justify">{description}</p>
             </div>
-        </Swing>
+        </>
     );
 };
 

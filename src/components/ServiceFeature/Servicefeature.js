@@ -12,7 +12,7 @@ const ServiceFeature = () => {
                     </div>
 
                     <div className="col-md-7">
-                        <h2>Exceptional Dental <br /> Care, on Your terms</h2>
+                        <h2>Sharing Smile <br /> through Car Caring  </h2>
                         <p className="">Most of the vehicles get damaged just because of
                          maintenance neglect. If you take care of your. </p>
                         <button className="btn btn-primary">Learn More </button>
