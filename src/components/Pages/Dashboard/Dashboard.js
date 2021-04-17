@@ -4,14 +4,10 @@ import Sidebar from '../Sidebar/Sidebar';
 
 const Dashboard = () => {
     return (
-        <section className="bg-info">
+        <section style={{ backgroundColor: '#82d7f8' }}>
             <div className="row container">
-                <div className="col-md-5">
-                    <Sidebar />
-                </div>
-                <div className="col-md-7 pt-5 mt-5">
-                    <BookingService />
-                </div>
+
+                <BookingService />
             </div>
         </section >
 

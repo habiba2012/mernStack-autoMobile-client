@@ -11,6 +11,10 @@ import Home from './components/Home/Home';
 import Dashboard from './components/Pages/Dashboard/Dashboard';
 import Login from './components/Pages/Login/Login';
 import NotFound from './components/Pages/NotFound';
+import BookingService from './components/Pages/BookingService/BookingService';
+import AddReview from './components/Pages/AddReview/AddReview';
+import AddService from './components/Pages/AddService/AddService';
+import ManageServices from './components/Pages/ManageServices/ManageServices';
 
 export const UserContext = createContext();
 function App() {
@@ -20,14 +24,30 @@ function App() {
       <Router>
         <Switch>
 
-          <Route path="/home">
-            <Home />
-          </Route>
+
           <Route path="/login">
             <Login />
           </Route>
           <Route path="/dashboard">
             <Dashboard />
+          </Route>
+          <Route path="/addBooking">
+            <BookingService />
+          </Route>
+          <Route path="/addReview">
+            <AddReview />
+          </Route>
+          <Route path="/addServices">
+            <AddService />
+          </Route>
+          <Route path="/makeAdmin">
+            <AddReview />
+          </Route>
+          <Route path="/manageServices">
+            <ManageServices />
+          </Route>
+          <Route path="/home">
+            <Home />
           </Route>
           <Route path="/">
             <Home />
