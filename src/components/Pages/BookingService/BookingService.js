@@ -53,11 +53,11 @@ const BookingService = ({ service }) => {
                 <form onSubmit={handleSubmit(onSubmit)}>
 
                     <div className="form-group" >
-                        <input type="text" id="name" defaultValue={loggedInUser.name} {...register("name", { required: false })} placeholder="Your Name" className="form-control" />
+                        <input type="text" id="name" defaultValue={loggedInUser.name} {...register("name", { required: true })} placeholder="Your Name" className="form-control" />
                         {errors.name && <span className="error">Name is required</span>}
                     </div>
                     <div className="form-group">
-                        <input type="text" id="email" defaultValue={loggedInUser.email} {...register("email", { required: false })} placeholder="Your Email" className="form-control" />
+                        <input type="text" id="email" defaultValue={loggedInUser.email} {...register("email", { required: true })} placeholder="Your Email" className="form-control" />
                         {errors.email && <span className="error">Email is required</span>}
                     </div>
 
