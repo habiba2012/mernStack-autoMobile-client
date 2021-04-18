@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory, useParams } from 'react-router';
 import { UserContext } from '../../../App';
+import MyBookList from '../MyBookingList/MyBookingList';
 import PaymentProcessing from '../PaymentProcess/PaymentProcessing';
 import Sidebar from '../Sidebar/Sidebar';
 
@@ -20,7 +21,6 @@ const BookingService = () => {
         const bookingData = {
             name,
             email,
-            service: data.service,
             address: data.address,
             phone: data.phone,
         }
@@ -73,11 +73,6 @@ const BookingService = () => {
                     </div>
 
                     <div className="form-group">
-                        <input type="text" name="service" id="service" defaultValue={serviceData.name} {...register("cost", { required: true })} placeholder="Your Email" className="form-control" />
-                        {errors.email && <span className="error">Service Name is required</span>}
-                    </div>
-
-                    <div className="form-group">
                         <input type="text" name="address" id="address" {...register("address", { required: true })} placeholder="Your Address" className="form-control" />
                         {errors.address && <span className="error">Address is required</span>}
                     </div>
@@ -116,6 +111,9 @@ const BookingService = () => {
                 </form>
 
             </div>
+            {
+                serviceData.map(myBooking => <MyBookList myBooking={myBooking}></MyBookList>)
+            }
 
         </div >
     );

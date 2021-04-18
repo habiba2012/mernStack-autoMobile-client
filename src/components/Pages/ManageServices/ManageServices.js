@@ -9,14 +9,14 @@ const ManageService = () => {
     const [manageBooking, setManageBooking] = useState([]);
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     useEffect(() => {
-        fetch("http://localhost:5500/booking")
+        fetch("https://automobile-servicing.herokuapp.com/booking")
             .then((res) => res.json())
             .then((data) => setManageBooking(data));
     }, []);
 
     const deleteService = (id) => {
         // console.log(event.target.parentNode)
-        fetch(`https://localhost:5500/${id}`, {
+        fetch(`https://automobile-servicing.herokuapp.com/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

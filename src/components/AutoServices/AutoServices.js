@@ -7,7 +7,7 @@ import AutoService from '../AutoService/AutoService';
 const AutoServices = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5500/service')
+        fetch('https://automobile-servicing.herokuapp.com/service')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])

@@ -15,7 +15,7 @@ const AddReview = () => {
             quote: data.quote,
             from: data.from
         };
-        const url = 'http://localhost:5500/addReview';
+        const url = 'https://automobile-servicing.herokuapp.com/addReview';
 
         fetch(url, {
             method: "POST",
