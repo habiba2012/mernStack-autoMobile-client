@@ -18,6 +18,7 @@ import MyBookingList from './components/Pages/BookingList/BookingList';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import AddAdmin from './components/Pages/AddAdmin/AddAdmin';
 import BookingList from './components/Pages/BookingList/BookingList';
+import MyBookingDetails from './components/Pages/MyBookingDetails/MyBookingDetails';
 
 export const UserContext = createContext();
 function App() {
@@ -39,18 +40,21 @@ function App() {
           <PrivateRoute path="/addReview">
             <AddReview />
           </PrivateRoute>
-          <Route path="/addServices">
+          <PrivateRoute path="/addServices">
             <AddService />
-          </Route>
-          <Route path="/makeAdmin">
+          </PrivateRoute>
+          <PrivateRoute path="/makeAdmin">
             <AddAdmin />
-          </Route>
-          <Route path="/manageServices">
+          </PrivateRoute>
+          <PrivateRoute path="/manageServices">
             <ManageServices />
-          </Route>
-          <Route path="/bookingList/:id">
+          </PrivateRoute>
+          <PrivateRoute path="/bookingList/:id">
             <BookingList />
-          </Route>
+          </PrivateRoute>
+          <PrivateRoute path="/myBooking">
+            <MyBookingDetails />
+          </PrivateRoute>
           <Route path="/home">
             <Home />
           </Route>

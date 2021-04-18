@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import Sidebar from "../Sidebar/Sidebar";
+import BookingService from "../BookingService/BookingService";
 
 
 const AddService = () => {
     const { register, handleSubmit, errors } = useForm();
     const [imageURL, setIMageURL] = useState(null);
+    const [services, setServices] = useState([])
 
     const onSubmit = (data) => {
         const serviceData = {
@@ -23,7 +25,8 @@ const AddService = () => {
                 "content-type": "application/json",
             },
             body: JSON.stringify(serviceData),
-        }).then((res) => console.log("server side response", res));
+        }).then((res) => res.json())
+            .then(data => setServices(data))
     };
 
     const handleImageUpload = (event) => {
@@ -105,6 +108,7 @@ const AddService = () => {
                     </form>
                 </div>
             </div>
+            {services.map(service => <BookingService service={service}></BookingService>)}
         </div>
     );
 };

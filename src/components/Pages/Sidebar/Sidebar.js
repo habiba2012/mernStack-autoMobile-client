@@ -35,7 +35,17 @@ const Sidebar = () => {
                         <FontAwesomeIcon icon={faGripHorizontal} /> <span>Dashboard</span>
                     </Link>
                 </li>
+                <li>
+                    <Link to="/myBooking" className="text-white">
+                        <FontAwesomeIcon icon={faCalendar} /> <span>My Booking</span>
+                    </Link>
+                </li>
                 {isAdmin && <div>
+                    <li>
+                        <Link to="/bookingList/:id" className="text-white">
+                            <FontAwesomeIcon icon={faFileAlt} /> <span>Booking List</span>
+                        </Link>
+                    </li>
                     <li>
                         <Link to="/makeAdmin" className="text-wite">
                             <FontAwesomeIcon icon={faUser} /> <span>Make Admin</span>
@@ -53,11 +63,7 @@ const Sidebar = () => {
                         <FontAwesomeIcon icon={faCalendar} /> <span>Booking</span>
                     </Link>
                 </li>
-                <li>
-                    <Link to="/bookingList/:id" className="text-white">
-                        <FontAwesomeIcon icon={faFileAlt} /> <span>Booking List</span>
-                    </Link>
-                </li>
+
 
                 <li>
                     <Link to="/addReview" className="text-white">

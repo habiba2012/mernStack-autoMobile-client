@@ -5,7 +5,7 @@ import { UserContext } from '../../../App';
 import PaymentProcessing from '../PaymentProcess/PaymentProcessing';
 import Sidebar from '../Sidebar/Sidebar';
 
-const BookingService = () => {
+const BookingService = ({ service }) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const [booking, setBooking] = useState(null);
@@ -53,11 +53,11 @@ const BookingService = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
 
                     <div className="form-group" >
-                        <input type="text" id="name" defaultValue={loggedInUser.name} {...register("name", { required: true })} placeholder="Your Name" className="form-control" />
+                        <input type="text" id="name" defaultValue={loggedInUser.name} {...register("name", { required: false })} placeholder="Your Name" className="form-control" />
                         {errors.name && <span className="error">Name is required</span>}
                     </div>
                     <div className="form-group">
-                        <input type="text" id="email" defaultValue={loggedInUser.email} {...register("email", { required: true })} placeholder="Your Email" className="form-control" />
+                        <input type="text" id="email" defaultValue={loggedInUser.email} {...register("email", { required: false })} placeholder="Your Email" className="form-control" />
                         {errors.email && <span className="error">Email is required</span>}
                     </div>
 
@@ -80,7 +80,7 @@ const BookingService = () => {
 
                     <div className="form-group col-sm-12 d-flex">
                         <h6 className="title mr-5 p-3">Your Service charge will be ${serviceData.cost}</h6>
-                        <button type="button" onClick={() => alert("Booking Successful.")} className="btn-sm btn-danger ">Proceed</button>
+                        <input type="submit" value="submit" className="btn-sm btn-danger " />
                     </div>
 
 
