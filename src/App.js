@@ -14,9 +14,10 @@ import BookingService from './components/Pages/BookingService/BookingService';
 import AddReview from './components/Pages/AddReview/AddReview';
 import AddService from './components/Pages/AddService/AddService';
 import ManageServices from './components/Pages/ManageServices/ManageServices';
-import MyBookingList from './components/Pages/MyBookingList/MyBookingList';
+import MyBookingList from './components/Pages/BookingList/BookingList';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import AddAdmin from './components/Pages/AddAdmin/AddAdmin';
+import BookingList from './components/Pages/BookingList/BookingList';
 
 export const UserContext = createContext();
 function App() {
@@ -48,7 +49,7 @@ function App() {
             <ManageServices />
           </Route>
           <Route path="/bookingList/:id">
-            <MyBookingList />
+            <BookingList />
           </Route>
           <Route path="/home">
             <Home />

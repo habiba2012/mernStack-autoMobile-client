@@ -17,7 +17,7 @@ const AutoService = (props) => {
     return (
         <>
             <div className="col-md-4 text-center  mb-5" id="autoService" onClick={() => handleBooking(_id)}>
-                <img style={{ height: "200px" }} src={imageURL} alt="" />
+                <img style={{ height: "200px" }} src={imageURL} alt="" id="autoService" />
                 <h5 className="mt-3 mb-3">{name}</h5><p>Service Charge ${cost}</p>
                 <p className="text-secondary text-justify">{description}</p>
             </div>

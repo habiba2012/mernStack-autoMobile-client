@@ -43,8 +43,8 @@ const ManageService = () => {
                         <Table bordered hover>
                             <thead>
                                 <tr>
-                                    <th>Service Name</th>
-                                    <th>Description</th>
+                                    <th>Customer Name</th>
+                                    <th>Service </th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -52,7 +52,7 @@ const ManageService = () => {
                                 {manageBooking.map((book) => (
                                     <tr key={book._id}>
                                         <td>{book.name}</td>
-                                        <td>{book.description}</td>
+                                        <td>{book.service}</td>
                                         <td>
                                             <FontAwesomeIcon
                                                 icon={faPencilAlt}
