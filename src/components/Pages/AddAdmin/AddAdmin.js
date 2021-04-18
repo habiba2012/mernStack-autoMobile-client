@@ -11,7 +11,7 @@ const AddAdmin = () => {
             email: data.email,
 
         };
-        const url = 'http://localhost:5500/addAdmin';
+        const url = 'https://automobile-servicing.herokuapp.com/addAdmin';
 
         fetch(url, {
             method: "POST",

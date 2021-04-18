@@ -24,7 +24,7 @@ const BookingService = () => {
             address: data.address,
             phone: data.phone,
         }
-        fetch('http://localhost:5500/addBooking', {
+        fetch('https://automobile-servicing.herokuapp.com/addBooking', {
             method: 'POST',
             body: JSON.stringify(bookingData),
             headers: {
@@ -36,7 +36,7 @@ const BookingService = () => {
     };
 
     useEffect(() => {
-        fetch(`http://localhost:5500/service`)
+        fetch(`https://automobile-servicing.herokuapp.com/service`)
             .then((res) => res.json())
             .then((data) => setServiceData(data));
     }, []);

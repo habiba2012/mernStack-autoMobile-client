@@ -15,7 +15,7 @@ const AddService = () => {
             description: data.description,
             cost: data.cost
         };
-        const url = 'http://localhost:5500/addServices';
+        const url = 'https://automobile-servicing.herokuapp.com/addServices';
 
         fetch(url, {
             method: "POST",
