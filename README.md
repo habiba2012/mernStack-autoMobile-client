@@ -1,5 +1,5 @@
 Live site Link
-https://automobile-service-4f0a8.web.app/
+https://wizardly-allen-df165c.netlify.app/
 
 Project title: Automobile Servicing
 
